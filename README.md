@@ -1,14 +1,21 @@
 # Sales Forecasting Decision Support
 
-Forecasting workflow for sales planning, model comparison, and decision-support reporting.
+How can a sales dataset become a reproducible forecasting decision-support artifact with clear public limitations?
 
 ## Business question
 
-What decision can this analysis or workflow support, and what evidence should a reviewer inspect first?
+How can a sales dataset become a reproducible forecasting decision-support artifact with clear public limitations?
+
+## Reviewer guide
+
+1. `data/raw/real_world_sales_data.csv` — sample-safe public input data.
+2. `references/Application-of-PyCaret-AutoML-for-Sales-Forecasting.pdf` — original forecasting reference artifact.
+3. `docs/evaluation.md` and `reports/results.md` — verification notes.
+4. `scripts/verify.py` — smoke verifier.
 
 ## Data source
 
-Sample sales dataset already included in original repo; large/raw variants should stay local-only.
+Public/sample sales dataset plus original forecasting reference PDF. Larger or private datasets should stay local-only.
 
 ## Repository structure
 
@@ -41,17 +48,23 @@ python -m pip install -r requirements.txt
 
 ## Run / verify
 
-1. `python scripts/verify.py`
+```bash
+python3 scripts/verify.py
+```
 
 ## Public outputs
 
-- Dashboard or BI artifact: `dashboard/`
+- Dashboard or public artifact: `Sample data, forecasting reference document, and verification evidence.`
 - Findings and evidence notes: `reports/`
 - Evaluation notes: `docs/`
 - Supporting references: `references/`
+
+## Claim boundary
+
+This repo demonstrates reproducible forecasting documentation and sample-safe artifact organization. It does not claim a deployed forecasting service or production-grade model monitoring.
 
 ## Data and security policy
 
 - Credentials, environment files, local raw data, generated working data, databases, archives, and scratch outputs are ignored by `.gitignore`.
 - Public repo keeps only shareable code, sample-safe artifacts, documentation, dashboard files, and evidence summaries.
-- Claims should stay bounded by available data and documented assumptions.
+- Claims stay bounded by available data and documented assumptions.
